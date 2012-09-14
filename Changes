@@ -1,0 +1,6 @@
+Revision history for Perl extension Acme::XKCD::DebianRandom.
+
+0.01  Fri Sep 14 16:34:45 2012
+	- original version; created by h2xs 1.23 with options
+		-AX Acme::XKCD::DebianRandom
+
