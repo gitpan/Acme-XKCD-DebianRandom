@@ -13,8 +13,5 @@ BEGIN { use_ok('Acme::XKCD::DebianRandom') };
 
 #########################
 
+# Check if the RNG resturns the correct dice roll
 is(getRandomNumber(), 4, "Correct Random Number");
-
-# Insert your test code below, the Test::More module is use()ed here so read
-# its man page ( perldoc Test::More ) for help writing this test script.
-

@@ -8,8 +8,14 @@
 use strict;
 use warnings;
 
-use Test::More tests => 1;
+use Test::More tests => 1001;
 BEGIN { use_ok('Acme::XKCD::DebianRandom') };
 
 #########################
+
+# stress test custom dice roll
+for(my $i = 1; $i <= 1000; $i++) {
+    $Acme::XKCD::DebianRandom::randomNumber = $i;
+    is(getRandomNumber(), $i, "stress test custom dice roll");
+}
 

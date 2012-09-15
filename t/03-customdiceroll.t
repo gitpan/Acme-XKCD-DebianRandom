@@ -8,8 +8,12 @@
 use strict;
 use warnings;
 
-use Test::More tests => 1;
+use Test::More tests => 2;
 BEGIN { use_ok('Acme::XKCD::DebianRandom') };
 
 #########################
+
+# Custom dice roll
+$Acme::XKCD::DebianRandom::randomNumber = 10;
+is(getRandomNumber(), 10, "Correct custom dice roll");
 

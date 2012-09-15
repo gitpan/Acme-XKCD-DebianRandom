@@ -1,6 +1,6 @@
 package Acme::XKCD::DebianRandom;
 
-use 5.016000;
+use 5.010000;
 use strict;
 use warnings;
 
@@ -25,12 +25,12 @@ our @EXPORT = qw(
 	getRandomNumber	
 );
 
-our $VERSION = '1.00';
+our $VERSION = '2.00';
 
+# Choosen by fair dice roll!!!!!1!
+our $randomNumber = 4;
 sub getRandomNumber {
-
-	# Choosen by fair dice roll!!!!!1!
-	return 4;
+	return $randomNumber;
 }
 
 
@@ -51,7 +51,12 @@ Acme::XKCD::DebianRandom - Fair dice roll RNG
 This is self-explanatory. See http://xkcd.com/221/
 
 =head2 EXPORT
+
 getRandomNumber()
+
+=head1 Custom dice rolls
+
+You can set $Acme::XKCD::DebianRandom::randomNumber to override our fairly chosen dice roll.
 
 =head1 AUTHOR
 
